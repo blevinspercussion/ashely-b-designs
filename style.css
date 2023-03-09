@@ -2,7 +2,56 @@
     margin: none;
     padding: none;
     overflow-x: hidden;
-    font-family: 'Allura', cursive;
+    --text-color: black;
+    --bg-main-color: #FBFACD;
+    --accent-color1: #7F669D;
+    /* font-family: 'Allura', cursive;
     font-family: 'Dosis', sans-serif;
+    font-family: 'Raleway', sans-serif; */
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: var(--accent-color1)
+}
+
+body {
+    background-color: var(--bg-main-color);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+li {
+
+}
+
+#logo {
+    font-family: 'Allura', cursive;
+    font-size: x-large;
+    min-width: 45vw;
+}
+
+nav {
     font-family: 'Raleway', sans-serif;
+    font-size: large;
+}
+
+.page-wrapper {
+    font-family: 'Raleway', sans-serif;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 45vw;
+    list-style: none;
 }
