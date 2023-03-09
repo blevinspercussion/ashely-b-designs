@@ -31,6 +31,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-top: 2rem;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    padding: 1rem;  
 }
 
 .hero {
@@ -63,6 +67,7 @@ header {
     border-radius: 15px;
     background-color: var(--bg-main-color);
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .hero-button:hover {
@@ -108,7 +113,7 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 3rem;
+    margin: 3rem 3rem 0 3rem;
     width: 100vw;
     background-color: var(--bg-secondary-color);
 }
@@ -130,13 +135,14 @@ nav {
 .section-photos {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
-    max-width: 50vw;
+    max-width: 100%;
 }
 
 .section-text {
     max-width: 30vw;
+    margin-left: 3rem;
 }
 
 .section-text p {
@@ -144,12 +150,12 @@ nav {
     background-color: var(--accent-color2);
     box-shadow: -15px 15px var(--accent-color1);
     padding: 3rem;
-    margin-bottom: 15rem;
+    margin-bottom: 5rem;
 }
 
 .side-image {
     max-width: 15vw;
-    margin: 1rem;
+    margin: 0 1rem 15rem 1rem;
 }
 
 ul {
