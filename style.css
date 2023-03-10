@@ -194,6 +194,24 @@ nav {
     margin: 0 1rem 15rem 1rem;
 }
 
+.portfolio {
+    opacity: 1;
+    filter: blur(0px);
+}
+
+.portfolio img {
+    max-width: 40vh;
+    margin: 3rem;
+}
+
+.portfolio-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
 ul {
     display: flex;
     align-items: center;
