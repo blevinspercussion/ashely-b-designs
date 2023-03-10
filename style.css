@@ -61,6 +61,26 @@ header {
     padding: 1rem;  
 }
 
+.hero-design {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100vw;
+}
+
+.hero-design-sub {
+    display: flex;
+    flex-direction: column;
+}
+
+#hero-design-text {
+    max-width: 25rem;
+    color: white;
+    margin-bottom: 3rem;
+}
+
 .hero-photography {
     display: flex;
     flex-direction: column;

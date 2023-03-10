@@ -18,6 +18,10 @@ const bandPhotography = document.getElementById("band-photography");
 const familyPhotography = document.getElementById("family-photography");
 const architecturePhotography = document.getElementById("architecture-photography");
 
+const photographySection = document.getElementById("photography-section");
+const photographyPortfolio = document.getElementById("portfolio-photography");
+
+
 const heroPhotographyText = document.getElementById("hero-photography-text");
 const heroPhotographyButtons = document.getElementById("hero-photography-buttons");
 
@@ -36,6 +40,7 @@ animatePhotographyHero = () => {
         targets: ".hero-photography",
         translateX: [-1000, 0],
         duration: 1500,
+        delay: 500,
         filter: ["blur(5px)", "blur(0px)"],
         opacity: [0, 1],
         easing: "easeOutQuad",
@@ -43,7 +48,7 @@ animatePhotographyHero = () => {
 
     anime({
         targets: heroPhotographyText,
-        delay: 1500,
+        delay: 2000,
         duration: 3000,
         opacity: [0, 1],
         filter: ["blur(5px", "blur(0px)"],
@@ -52,7 +57,7 @@ animatePhotographyHero = () => {
 
     anime({
         targets: heroPhotographyButtons,
-        delay: 1500,
+        delay: 2000,
         duration: 2000,
         opacity: [0, 1],
         filter: ["blur(5px", "blur(0px)"],
@@ -62,13 +67,40 @@ animatePhotographyHero = () => {
 }
 
 window.addEventListener("load", () => {
-    console.log('loaded')
     animatePhotographyHero();
 })
 
 designLink.addEventListener("click", () => {
+    if (!document.getElementById("hero-design").classList.contains("hidden")){
+        return
+    }
+    anime({
+        targets: ".hero-photography",
+        translateX: [0, 1000],
+        filter: ["blur(0px)", "blur(5px)"],
+        opacity: [1, 0],
+        duration: 1500,
+        easing: "easeInQuad",
+    })
+    photographySection.classList.add("hidden");
+    photographyPortfolio.classList.add("hidden");
+    setTimeout(() => {
+        document.getElementById("hero-photography").classList.add("hidden");
+        document.getElementById("hero-design").classList.remove("hidden");
+        anime({
+            targets: ".hero-design",
+            translateX: [-1000, 0],
+            filter: ["blur(5px)", "blur(0px)"],
+            opacity: [0, 1],
+            easing: "easeOutQuad",
+            duration: 2000,
+
+        })
+    }, 1500);
 
 })
+
+// Handle animations for photo portfolio
 
 function hideBandImages() {
     
