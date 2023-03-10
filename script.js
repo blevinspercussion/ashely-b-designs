@@ -18,9 +18,12 @@ const bandPhotography = document.getElementById("band-photography");
 const familyPhotography = document.getElementById("family-photography");
 const architecturePhotography = document.getElementById("architecture-photography");
 
+const postersLink = document.getElementById("posters");
+const editingLink = document.getElementById("editing");
+const digitalDesignLink = document.getElementById("digital-design");
+
 const photographySection = document.getElementById("photography-section");
 const photographyPortfolio = document.getElementById("portfolio-photography");
-
 
 const heroPhotographyText = document.getElementById("hero-photography-text");
 const heroPhotographyButtons = document.getElementById("hero-photography-buttons");
@@ -102,97 +105,46 @@ designLink.addEventListener("click", () => {
 
 })
 
-// Handle animations for photo portfolio
+// Handle animations for portfolios
 
-function hideBandImages() {
-    
+hideImages = (imagesArray) => {
     let i = 0;
-    while (i<bandImages.length) {
-        bandImages[i].classList.add("hidden");
+    while (i<imagesArray.length) {
+        imagesArray[i].classList.add("hidden");
         i++;
     }
 }
 
-function hideFamilyImages() {
+showImages = (imagesArray) => {
     let i = 0;
-    while (i<familyImages.length) {
-        familyImages[i].classList.add("hidden");
-        i++;        
-    }
-}
-
-function hideArchitectureImages() {
-    let i = 0;
-    while (i<architectureImages.length) {
-        architectureImages[i].classList.add("hidden");
-        i++;
-    }
-}
-
-function showBandImages() {
-    let i = 0;
-    i = 0;
-    while (i<bandImages.length) {
-        bandImages[i].classList.remove("hidden");
+    while (i<imagesArray.length) {
+        imagesArray[i].classList.remove("hidden");3
         i++;
     }
     anime({
-        targets: ".band-image",
+        targets: imagesArray,
         translateX: [-1000, 0],
         duration: 1000,
         easing: "easeInOutQuad",
         filter: ["blur(5px)", "blur(0px)"],
         opacity: [0, 1],
-    })
+        })
 }
-
-function showFamilyImages() {
-    i = 0;
-    while (i<familyImages.length) {
-        familyImages[i].classList.remove("hidden");
-        i++;
-    }
-    anime({
-        targets: ".family-image",
-        translateX: [-1000, 0],
-        duration: 1000,
-        easing: "easeInOutQuad",
-        filter: ["blur(5px)", "blur(0px)"],
-        opacity: [0, 1],
-    })
-}
-
-function showArchitectureImages() {
-    i = 0;
-    while (i<architectureImages.length) {
-        architectureImages[i].classList.remove("hidden");
-        i++;
-    }
-    anime({
-        targets: ".architecture-image",
-        translateX: [-1000, 0],
-        duration: 1000,
-        easing: "easeInOutQuad",
-        filter: ["blur(5px)", "blur(0px)"],
-        opacity: [0, 1],
-    })
-}
-
 
 bandPhotography.addEventListener("click", () => {
-    hideFamilyImages();
-    hideArchitectureImages();
-    showBandImages();
+    hideImages(familyImages);
+    hideImages(architectureImages);
+    showImages(bandImages);
 });
 
 familyPhotography.addEventListener("click", () => {
-    hideBandImages();
-    hideArchitectureImages();
-    showFamilyImages();
+    hideImages(bandImages);
+    hideImages(architectureImages);
+    showImages(familyImages);
 });
 
 architecturePhotography.addEventListener("click", () => {
-    hideBandImages();
-    hideFamilyImages();
-    showArchitectureImages();
+    hideImages(bandImages);
+    hideImages(familyImages);
+    showImages(architectureImages);
 });
