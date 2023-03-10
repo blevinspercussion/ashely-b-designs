@@ -84,6 +84,8 @@ designLink.addEventListener("click", () => {
     })
     photographySection.classList.add("hidden");
     photographyPortfolio.classList.add("hidden");
+    document.getElementById("design-section").classList.remove("hidden");
+    document.getElementById("portfolio-design").classList.remove("hidden");
     setTimeout(() => {
         document.getElementById("hero-photography").classList.add("hidden");
         document.getElementById("hero-design").classList.remove("hidden");
