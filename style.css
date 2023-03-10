@@ -1,7 +1,7 @@
 * {
     margin: none;
     padding: none;
-    overflow-x: hidden;
+    overflow-x: clip;
     --text-color: black;
     --bg-main-color: #FBFACD;
     --bg-secondary-color: #BA94D1;
@@ -39,11 +39,13 @@ a {
 a:hover {
     color: var(--accent-color1);
     transition: 0.5s;
+    cursor: pointer;
 }
 
 body {
     background-color: var(--bg-main-color);
 }
+
 
 .content-alt {
     flex-direction: row-reverse;
@@ -130,6 +132,20 @@ nav {
     font-family: 'Raleway', sans-serif;
 }
 
+#portfolio-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0px;
+    width: 85vw;
+    background-color: var(--bg-secondary-color);
+    z-index: 3;
+    /* height: 5rem; */
+    padding: 1.5rem;
+}
+
+
 .section {
     display: flex;
     flex-direction: column;
@@ -197,11 +213,11 @@ nav {
 .portfolio {
     opacity: 1;
     filter: blur(0px);
-}
-
-.portfolio img {
-    max-width: 40vh;
-    margin: 3rem;
+    /* overflow: hidden ; */
+    max-width: 100vw;
+    max-height: 100%;
+    margin-bottom: 5rem;
+    /* margin-top: 3rem; */
 }
 
 .portfolio-images {
@@ -209,6 +225,12 @@ nav {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    height: 100%;
+}
+
+.portfolio-images img {
+    max-width: 30vw;
+    margin: 1rem;
 }
 
 
