@@ -61,7 +61,7 @@ header {
     padding: 1rem;  
 }
 
-.hero {
+.hero-photography {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -73,7 +73,7 @@ header {
     margin-top: 3rem;
 }
 
-.hero h2 {
+.hero-photography h2 {
     color: white;
     font-size: 3rem;
     /* background-color: rgba(0, 0, 0, 0.4); */
@@ -141,7 +141,7 @@ nav {
     width: 85vw;
     background-color: var(--bg-secondary-color);
     z-index: 3;
-    /* height: 5rem; */
+    height: 3rem;
     padding: 1.5rem;
 }
 
@@ -231,6 +231,10 @@ nav {
 .portfolio-images img {
     max-width: 30vw;
     margin: 1rem;
+}
+
+.portfolio-images img:hover {
+    box-shadow: 10px 10px 15px white;
 }
 
 

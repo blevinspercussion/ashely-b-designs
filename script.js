@@ -9,29 +9,66 @@ const observer = new IntersectionObserver((entries) => {
     })
 }, {threshold: 0.5})
 
-hiddenSections = document.querySelectorAll(".section-content");
+let hiddenSections = document.querySelectorAll(".section-content");
 hiddenSections.forEach((el) => observer.observe(el));
 
 
 ///////////////// Event Listeners /////////////////
-bandPhotography = document.getElementById("band-photography");
-familyPhotography = document.getElementById("family-photography");
-architecturePhotography = document.getElementById("architecture-photography");
+const bandPhotography = document.getElementById("band-photography");
+const familyPhotography = document.getElementById("family-photography");
+const architecturePhotography = document.getElementById("architecture-photography");
+
+const heroPhotographyText = document.getElementById("hero-photography-text");
+const heroPhotographyButtons = document.getElementById("hero-photography-buttons");
+
+const photographyLink = document.getElementById("photography-link");
+const designLink = document.getElementById("design-link");
+const craftsLink = document.getElementById("crafts-link");
 
 let bandImages = document.querySelectorAll(".band-image");
 let familyImages = document.querySelectorAll(".family-image");
 let architectureImages = document.querySelectorAll(".architecture-image");
 
-animateOut = (elements) => {
+
+// Animate hero on page load 
+animatePhotographyHero = () => {
     anime({
-        targets: elements,
-        translateX: [0, 1000],
-        duration: 1000,
-        easing: "easeInOutQuad",
-        filter: ["blur(0px)", "blur(5px)"],
-        opacity: [1, 0],
+        targets: ".hero-photography",
+        translateX: [-1000, 0],
+        duration: 1500,
+        filter: ["blur(5px)", "blur(0px)"],
+        opacity: [0, 1],
+        easing: "easeOutQuad",
+    })
+
+    anime({
+        targets: heroPhotographyText,
+        delay: 1500,
+        duration: 3000,
+        opacity: [0, 1],
+        filter: ["blur(5px", "blur(0px)"],
+        easing: "easeOutQuad",
+    })
+
+    anime({
+        targets: heroPhotographyButtons,
+        delay: 1500,
+        duration: 2000,
+        opacity: [0, 1],
+        filter: ["blur(5px", "blur(0px)"],
+        easing: "easeOutQuad",
+        translateX: [50, 0],
     })
 }
+
+window.addEventListener("load", () => {
+    console.log('loaded')
+    animatePhotographyHero();
+})
+
+designLink.addEventListener("click", () => {
+
+})
 
 function hideBandImages() {
     
