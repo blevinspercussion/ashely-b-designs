@@ -14,6 +14,8 @@ hiddenSections.forEach((el) => observer.observe(el));
 
 
 ///////////////// Event Listeners /////////////////
+
+// Declare variables for dom elements
 const bandPhotography = document.getElementById("band-photography");
 const familyPhotography = document.getElementById("family-photography");
 const architecturePhotography = document.getElementById("architecture-photography");
@@ -35,6 +37,9 @@ const craftsLink = document.getElementById("crafts-link");
 let bandImages = document.querySelectorAll(".band-image");
 let familyImages = document.querySelectorAll(".family-image");
 let architectureImages = document.querySelectorAll(".architecture-image");
+let posterImages = document.querySelectorAll(".poster-image");
+let photoEditingImages = document.querySelectorAll(".photo-editing-image");
+let designImages = document.querySelectorAll(".design-image");
 
 
 // Animate hero on page load 
@@ -147,4 +152,22 @@ architecturePhotography.addEventListener("click", () => {
     hideImages(bandImages);
     hideImages(familyImages);
     showImages(architectureImages);
+});
+
+postersLink.addEventListener("click", () => {
+   hideImages(photoEditingImages);
+   hideImages(designImages);
+   showImages(posterImages); 
+});
+
+editingLink.addEventListener("click", () => {
+    hideImages(posterImages);
+    hideImages(designImages);
+    showImages(photoEditingImages);
+});
+
+digitalDesignLink.addEventListener("click", () => {
+    hideImages(posterImages);
+    hideImages(photoEditingImages);
+    showImages(designImages);
 });
