@@ -138,7 +138,17 @@ designLink.addEventListener("click", () => {
             animateSectionIn(heroDesign, designSection, designPortfolio);
 
         }, 1500);
-    }
+    };
+});
+
+photographyLink.addEventListener("click", () => {
+    if (heroPhotography.classList.contains("hidden")) {
+        animateSectionOut(heroDesign, designSection, designPortfolio);
+        // animateSectionOut(heroCrafts, craftsSection, craftsPortfolio);
+        setTimeout(() => {
+            animateSectionIn(heroPhotography, photographySection, photographyPortfolio);
+        }, 1500);
+    };
 });
 
 // Handle animations for portfolios
