@@ -48,6 +48,29 @@ let posterImages = document.querySelectorAll(".poster-image");
 let photoEditingImages = document.querySelectorAll(".photo-editing-image");
 let designImages = document.querySelectorAll(".design-image");
 
+// Handle mobile menu 
+
+const hamburgerIcon = document.getElementById("hamburger-menu-icon");
+const exitIcon = document.getElementById("mobile-exit-icon");
+
+hamburgerIcon.addEventListener("click", () => {
+    anime({
+        targets: document.getElementById("main-nav"),
+        translateX: [0, "100vw"],
+        duration: 1000,
+        easing: "easeOutQuad",
+    });
+});
+
+exitIcon.addEventListener("click", () => {
+    anime({
+        targets: document.getElementById("main-nav"),
+        translateX: ["100vw", "-100vw"],
+        duration: 1000,
+        easing: "easeOutQuad",
+    });
+});
+
 
 // Animate hero on page load 
 
