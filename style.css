@@ -94,6 +94,7 @@ header {
 }
 
 .hero-photography h2 {
+    opacity: 0;
     color: white;
     font-size: 3rem;
     /* background-color: rgba(0, 0, 0, 0.4); */
@@ -104,14 +105,15 @@ header {
 }
 
 .hero-button {
-    height: 7rem;
+    height: 5rem;
     width: 15rem;
     margin-left: 3rem;
     font-size: 2rem;
-    border-radius: 15px;
+    border-radius: 25px;
     background-color: var(--bg-main-color);
     transition: 0.5s;
     cursor: pointer;
+    border: none;
 }
 
 .hero-button:hover {
@@ -120,13 +122,13 @@ header {
 }
 
 .hero-buttons-div {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center; */
     min-width: 20rem;
-    position: static;
-    top: 60vh;
-    margin-right: 10vw;
+    position: absolute;
+    top: 40vh;
+    right: 29vw;
 }
 
 li {

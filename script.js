@@ -43,7 +43,13 @@ let designImages = document.querySelectorAll(".design-image");
 
 
 // Animate hero on page load 
+handleMainNavigation = () => {
+    
+}
+
+
 animatePhotographyHero = () => {
+    if (!document.getElementById("hero-photography").classList.contains("hidden")){
     anime({
         targets: ".hero-photography",
         translateX: [-1000, 0],
@@ -72,6 +78,7 @@ animatePhotographyHero = () => {
         easing: "easeOutQuad",
         translateX: [50, 0],
     })
+    }
 }
 
 window.addEventListener("load", () => {
