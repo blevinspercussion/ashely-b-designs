@@ -110,6 +110,8 @@ animateSectionOut = (heroDiv, introSection, portfolioSection) => {
 }
 
 animateSectionIn = (heroDiv, introSection, portfolioSection) => {
+    introSection.classList.remove("hidden");
+    portfolioSection.classList.remove("hidden");
     heroDiv.classList.remove("hidden");
     anime({
         targets: heroDiv,
@@ -120,8 +122,6 @@ animateSectionIn = (heroDiv, introSection, portfolioSection) => {
         duration: 2000,
 
     })
-    introSection.classList.remove("hidden");
-    portfolioSection.classList.remove("hidden");
 }
 
 hideCraftsPage = () => {
