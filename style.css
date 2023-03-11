@@ -345,7 +345,30 @@ ul {
     
     }
 
-    
+    .hero-photography {
+        background-position-x: -200px;
+        align-items: center;
+    }
 
+    .hero-photography h2 {
+        margin-left: 3rem;
+        width: 90vw;
+        margin-top: 5vh;
+    }
+
+    #hero-photography-text {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .hero-buttons-div {
+        left: 0vw;
+    }
+
+    .hero-button {
+        position: relative;
+        right: -35vw;
+        top: 10vh; 
+    }
 
 }
