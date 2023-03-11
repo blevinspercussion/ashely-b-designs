@@ -210,3 +210,6 @@ digitalDesignLink.addEventListener("click", () => {
     hideImages(photoEditingImages);
     showImages(designImages);
 });
+
+// Control photo grid
+
