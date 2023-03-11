@@ -371,4 +371,18 @@ ul {
         top: 10vh; 
     }
 
+    .section-content {
+        flex-direction: column;
+        width: 100vw;
+        margin-right: 3rem;
+    }
+
+    .section-photo {
+        margin-left: 8rem;
+    }
+
+    .section-text {
+        max-width: 100vw;
+    }
+
 }
