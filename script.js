@@ -53,7 +53,6 @@ let designImages = document.querySelectorAll(".design-image");
 
 
 animatePhotographyHero = () => {
-    if (!heroPhotography.classList.contains("hidden")){
     anime({
         targets: ".hero-photography",
         translateX: [-1000, 0],
@@ -82,7 +81,6 @@ animatePhotographyHero = () => {
         easing: "easeOutQuad",
         translateX: [50, 0],
     })
-    }
 }
 
 window.addEventListener("load", () => {

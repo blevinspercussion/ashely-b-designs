@@ -82,6 +82,7 @@ header {
 }
 
 .hero-photography {
+    opacity: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
