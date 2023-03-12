@@ -57,6 +57,10 @@ a:hover {
     cursor: pointer;
 }
 
+.bio-content {
+    flex-direction: column;
+}
+
 body {
     background-color: var(--bg-main-color);
 }
@@ -223,7 +227,7 @@ nav {
 }
 
 #portfolio-crafts {
-    height: fit-content;
+
 }
 
 #portfolio-nav {
@@ -249,7 +253,7 @@ nav {
     margin-top: 3rem;
     width: 100vw;
     background-color: var(--bg-secondary-color);
-    height: fit-content;
+    max-height: fit-content;
     font-family: 'Raleway', sans-serif;
 
 }
@@ -264,11 +268,13 @@ nav {
 .section-content {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 75vw;
     opacity: 0;
     filter: blur(10px);
     transform: translateX(100px);
+    max-height: fit-content;
+    overflow: visible;
 }
 
 .section-photo img {
@@ -286,12 +292,13 @@ nav {
 .section-text {
     max-width: 30vw;
     margin-left: 3rem;
+    overflow: visible;
 }
 
 .section-text p {
     font-size: large;
     background-color: var(--accent-color2);
-    box-shadow: -15px 15px var(--accent-color1);
+    box-shadow: 15px 15px var(--accent-color1);
     padding: 3rem;
     margin-bottom: 5rem;
 }
