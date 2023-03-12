@@ -70,6 +70,16 @@ body {
     width: 100vw;
 }
 
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem 0 3rem 0;
+    padding: 2rem;
+    font-size: large;
+    background-color: var(--bg-secondary-color);
+}
+
 #hamburger-menu-icon {
     display: none;
 }
