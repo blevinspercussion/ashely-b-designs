@@ -70,6 +70,7 @@ body {
     flex-direction: row-reverse;
 }
 
+
 #crafts-section {
     width: 100vw;
 }
@@ -226,8 +227,8 @@ nav {
     font-family: 'Raleway', sans-serif;
 }
 
-#portfolio-crafts {
-
+#portfolio-crafts .portfolio-images {
+    margin-left: 9vw;
 }
 
 #portfolio-nav {
