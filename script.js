@@ -36,6 +36,8 @@ const designSection = document.getElementById("design-section");
 const designPortfolio = document.getElementById("portfolio-design");
 
 const heroCrafts = document.getElementById("hero-crafts");
+const craftsSection = document.getElementById("crafts-section");
+const craftsPortfolio = document.getElementById("portfolio-crafts");
 
 const photographyLink = document.getElementById("photography-link");
 const designLink = document.getElementById("design-link");
@@ -154,7 +156,7 @@ hideCraftsPage = () => {
 designLink.addEventListener("click", () => {    
     if (heroDesign.classList.contains("hidden")) {
         animateSectionOut(heroPhotography, photographySection, photographyPortfolio);
-        // animateSectionOut(heroCrafts);
+        animateSectionOut(heroCrafts, photographySection, photographyPortfolio);
         setTimeout(() => {
             animateSectionIn(heroDesign, designSection, designPortfolio);
 
@@ -165,12 +167,22 @@ designLink.addEventListener("click", () => {
 photographyLink.addEventListener("click", () => {
     if (heroPhotography.classList.contains("hidden")) {
         animateSectionOut(heroDesign, designSection, designPortfolio);
-        // animateSectionOut(heroCrafts, craftsSection, craftsPortfolio);
+        animateSectionOut(heroCrafts, craftsSection, craftsPortfolio);
         setTimeout(() => {
             animateSectionIn(heroPhotography, photographySection, photographyPortfolio);
         }, 1500);
     };
 });
+
+craftsLink.addEventListener("click", () => {
+    if (heroCrafts.classList.contains("hidden")) {
+        animateSectionOut(heroDesign, designSection, designPortfolio);
+        animateSectionOut(heroPhotography, photographySection, photographyPortfolio);
+        setTimeout(() => {
+            animateSectionIn(heroCrafts, craftsSection, craftsPortfolio);
+        }, 1500);
+    }
+})
 
 // Handle animations for portfolios
 

@@ -79,6 +79,34 @@ header {
     padding: 1rem;  
 }
 
+.hero-crafts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--bg-secondary-color);
+    width: 100vw;
+    margin-top: 5rem;
+}
+
+.hero-crafts-sub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 10rem;
+}
+
+#hero-crafts-text {
+    margin-bottom: 5rem;
+    max-width: 40vw;
+    font-size: xx-large;
+}
+
+.hero-crafts img {
+    max-height: 80vh;
+}
+
 .hero-design {
     display: flex;
     align-items: center;
@@ -370,6 +398,8 @@ ul {
         right: -35vw;
         top: 10vh; 
     }
+
+
 
     .portfolio-images {
         margin-left: 2rem;
