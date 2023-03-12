@@ -25,6 +25,7 @@
     /* font-family: 'Allura', cursive;
     font-family: 'Dosis', sans-serif;
     font-family: 'Raleway', sans-serif; */
+
 }
 
 /* width */
@@ -238,7 +239,9 @@ nav {
     margin-top: 3rem;
     width: 100vw;
     background-color: var(--bg-secondary-color);
-    height: fit-content
+    height: fit-content;
+    font-family: 'Raleway', sans-serif;
+
 }
 
 .section-heading {
