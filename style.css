@@ -65,6 +65,10 @@ body {
     flex-direction: row-reverse;
 }
 
+#crafts-section {
+    width: 100vw;
+}
+
 #hamburger-menu-icon {
     display: none;
 }
@@ -207,6 +211,10 @@ nav {
     font-family: 'Raleway', sans-serif;
 }
 
+#portfolio-crafts {
+    height: fit-content;
+}
+
 #portfolio-nav {
     display: flex;
     align-items: center;
@@ -227,9 +235,10 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 3rem 3rem 0 3rem;
+    margin-top: 3rem;
     width: 100vw;
     background-color: var(--bg-secondary-color);
+    height: fit-content
 }
 
 .section-heading {

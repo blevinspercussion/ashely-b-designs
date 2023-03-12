@@ -130,7 +130,6 @@ animateSectionOut = (heroDiv, introSection, portfolioSection) => {
         heroDiv.classList.add("hidden");
         introSection.classList.add("hidden");
         portfolioSection.classList.add("hidden");
-
     }, 1500)
 }
 
@@ -156,7 +155,7 @@ hideCraftsPage = () => {
 designLink.addEventListener("click", () => {    
     if (heroDesign.classList.contains("hidden")) {
         animateSectionOut(heroPhotography, photographySection, photographyPortfolio);
-        animateSectionOut(heroCrafts, photographySection, photographyPortfolio);
+        animateSectionOut(heroCrafts, craftsSection, craftsPortfolio);
         setTimeout(() => {
             animateSectionIn(heroDesign, designSection, designPortfolio);
 
