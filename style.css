@@ -196,6 +196,7 @@ header {
   align-items: flex-end;
   background-image: url("./media/images/at_the_lake.jpg");
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   min-width: 100vw;
   min-height: 85vh;
