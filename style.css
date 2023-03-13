@@ -98,7 +98,9 @@ footer {
   max-width: 100vw;
   max-height: 100vh;
   position: fixed;
-  top: 0vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .gallery-exit {
