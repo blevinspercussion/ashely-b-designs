@@ -94,7 +94,7 @@ footer {
   top: 0vh;
 }
 
-.gallery img {
+.current-image {
   max-width: 100vw;
   max-height: 100vh;
   position: fixed;
@@ -104,6 +104,7 @@ footer {
 }
 
 .gallery-exit {
+  position: absolute;
   width: 2rem;
   right: 20vw;
   top: 3vh;
@@ -195,7 +196,7 @@ header {
   opacity: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   background-image: url("./media/images/at_the_lake.jpg");
   background-position: center;
   background-size: cover;
@@ -205,14 +206,19 @@ header {
   margin-top: 3rem;
 }
 
+#hero-photography-content {
+  position: absolute;
+  right: 15vw;
+}
+
 .hero-photography h2 {
   opacity: 0;
   color: white;
   font-size: 3rem;
   /* background-color: rgba(0, 0, 0, 0.4); */
   max-width: 25rem;
-  position: static;
-  margin-right: 15vw;
+  /* position: static; */
+  /* margin-right: 15vw; */
   padding: 5rem;
 }
 
@@ -235,9 +241,10 @@ header {
 
 .hero-buttons-div {
   min-width: 20rem;
-  position: absolute;
+  margin-left: 5rem;
+  /* position: absolute;
   top: 40vh;
-  right: 29vw;
+  right: 29vw; */
 }
 
 li {
@@ -385,8 +392,9 @@ nav {
 }
 
 .portfolio-images img:hover {
-  /* box-shadow: 0 0 10px 15px white; */
-  /* cursor: pointer; */
+  box-shadow: 0 0 10px 15px white;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 ul {

@@ -297,6 +297,7 @@ setupImageGallery = (imageArray) => {
       galleryLeftArrow.classList.add("gallery-left-arrow");
       galleryRightArrow.classList.add("gallery-right-arrow");
       currentImg.src = imageArray[i].src;
+      currentImg.classList.add("current-image");
       galleryDiv.classList.add("gallery");
 
       // Add event listeners
