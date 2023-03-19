@@ -443,6 +443,10 @@ ul {
     display: block;
   }
 
+  .hidden {
+    display: none;
+  }
+
   #main-nav ul {
     display: flex;
     flex-direction: column;
