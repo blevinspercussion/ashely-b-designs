@@ -505,6 +505,21 @@ ul {
     top: 10vh;
   }
 
+  #hero-design {
+    position: relative;
+    right: 0vw;
+    width: 200vw;
+  }
+
+  .hero-design-sub {
+    position: relative;
+    left: 90vw;
+  }
+
+  #hero-design-text {
+    display: none;
+  }
+
   .portfolio-images {
     margin-left: 2rem;
   }
@@ -513,6 +528,10 @@ ul {
     flex-direction: column;
     width: 100vw;
     margin-right: 3rem;
+  }
+
+  .section-heading {
+    text-align: center;
   }
 
   .section-photo {
