@@ -57,7 +57,33 @@ let photoEditingImages = document.querySelectorAll(".photo-editing-image");
 let designImages = document.querySelectorAll(".design-image");
 let craftImages = document.querySelectorAll(".craft-image");
 
+const portfolioImages = document.querySelectorAll(".portfolio-image");
+
 let currentGallery = bandImages; // Required to set up the current images for image gallery
+
+// Set up image shadow box
+
+for (let i = 0; i < portfolioImages.length; i++) {
+  portfolioImages[i].addEventListener("click", () => {
+    const shadowBox = document.createElement("div");
+    const largeImage = document.createElement("img");
+    const exitButton = document.createElement("img");
+
+    exitButton.src = "./media/icons/exit-icon.png";
+    largeImage.src = portfolioImages[i].src;
+
+    shadowBox.classList.add("gallery");
+    largeImage.classList.add("current-image");
+    exitButton.classList.add("gallery-exit");
+
+    document.body.append(shadowBox);
+    shadowBox.appendChild(largeImage);
+
+    shadowBox.addEventListener("click", () => {
+      shadowBox.remove();
+    });
+  });
+}
 
 // Handle mobile menu
 
@@ -198,8 +224,8 @@ craftsLink.addEventListener("click", () => {
       animateSectionIn(heroCrafts, craftsSection, craftsPortfolio);
     }, 1500);
   }
-  currentGallery = craftImages;
-  setupImageGallery(currentGallery);
+  // currentGallery = craftImages;
+  // setupImageGallery(currentGallery);
 });
 
 // Handle animations for portfolios
@@ -234,7 +260,7 @@ bandPhotography.addEventListener("click", () => {
   hideImages(architectureImages);
   showImages(bandImages);
   currentGallery = bandImages;
-  setupImageGallery(currentGallery);
+  // setupImageGallery(currentGallery);
 });
 
 familyPhotography.addEventListener("click", () => {
@@ -242,7 +268,7 @@ familyPhotography.addEventListener("click", () => {
   hideImages(bandImages);
   hideImages(architectureImages);
   showImages(familyImages);
-  setupImageGallery(currentGallery);
+  // setupImageGallery(currentGallery);
 });
 
 architecturePhotography.addEventListener("click", () => {
@@ -250,7 +276,7 @@ architecturePhotography.addEventListener("click", () => {
   hideImages(familyImages);
   showImages(architectureImages);
   currentGallery = architectureImages;
-  setupImageGallery(currentGallery);
+  // setupImageGallery(currentGallery);
 });
 
 postersLink.addEventListener("click", () => {
@@ -258,7 +284,7 @@ postersLink.addEventListener("click", () => {
   hideImages(designImages);
   showImages(posterImages);
   currentGallery = posterImages;
-  setupImageGallery(currentGallery);
+  // setupImageGallery(currentGallery);
 });
 
 editingLink.addEventListener("click", () => {
@@ -266,7 +292,7 @@ editingLink.addEventListener("click", () => {
   hideImages(designImages);
   showImages(photoEditingImages);
   currentGallery = photoEditingImages;
-  setupImageGallery(currentGallery);
+  // setupImageGallery(currentGallery);
 });
 
 digitalDesignLink.addEventListener("click", () => {
@@ -274,62 +300,62 @@ digitalDesignLink.addEventListener("click", () => {
   hideImages(photoEditingImages);
   showImages(designImages);
   currentGallery = designImages;
-  setupImageGallery(designImages);
+  // setupImageGallery(designImages);
 });
 
 // Image Gallery
 
-setupImageGallery = (imageArray) => {
-  for (let i = 0; i < bandImages.length; i++) {
-    imageArray[i].addEventListener("click", () => {
-      // Create Elements
-      const galleryDiv = document.createElement("div");
-      let currentImg = document.createElement("img");
-      const galleryExitButton = document.createElement("img");
-      const galleryLeftArrow = document.createElement("img");
-      const galleryRightArrow = document.createElement("img");
+// setupImageGallery = (imageArray) => {
+//   for (let i = 0; i < bandImages.length; i++) {
+//     imageArray[i].addEventListener("click", () => {
+//       // Create Elements
+//       const galleryDiv = document.createElement("div");
+//       let currentImg = document.createElement("img");
+//       const galleryExitButton = document.createElement("img");
+//       const galleryLeftArrow = document.createElement("img");
+//       const galleryRightArrow = document.createElement("img");
 
-      // Add attributes to created elements
-      galleryExitButton.src = "./media/icons/exit-icon.png";
-      galleryLeftArrow.src = "./media/icons/left-arrow.png";
-      galleryRightArrow.src = "./media/icons/right-arrow.png";
-      galleryExitButton.classList.add("gallery-exit");
-      galleryLeftArrow.classList.add("gallery-left-arrow");
-      galleryRightArrow.classList.add("gallery-right-arrow");
-      currentImg.src = imageArray[i].src;
-      currentImg.classList.add("current-image");
-      galleryDiv.classList.add("gallery");
+//       // Add attributes to created elements
+//       galleryExitButton.src = "./media/icons/exit-icon.png";
+//       galleryLeftArrow.src = "./media/icons/left-arrow.png";
+//       galleryRightArrow.src = "./media/icons/right-arrow.png";
+//       galleryExitButton.classList.add("gallery-exit");
+//       galleryLeftArrow.classList.add("gallery-left-arrow");
+//       galleryRightArrow.classList.add("gallery-right-arrow");
+//       currentImg.src = imageArray[i].src;
+//       currentImg.classList.add("current-image");
+//       galleryDiv.classList.add("gallery");
 
-      // Add event listeners
-      galleryExitButton.addEventListener("click", () => {
-        galleryDiv.remove();
-        galleryLeftArrow.remove();
-        galleryRightArrow.remove();
-      });
+//       // Add event listeners
+//       galleryExitButton.addEventListener("click", () => {
+//         galleryDiv.remove();
+//         galleryLeftArrow.remove();
+//         galleryRightArrow.remove();
+//       });
 
-      galleryLeftArrow.addEventListener("click", () => {
-        if (i === 0) {
-          i = imageArray.length;
-        }
-        currentImg.src = imageArray[i - 1].src;
-        i--;
-      });
+//       galleryLeftArrow.addEventListener("click", () => {
+//         if (i === 0) {
+//           i = imageArray.length;
+//         }
+//         currentImg.src = imageArray[i - 1].src;
+//         i--;
+//       });
 
-      galleryRightArrow.addEventListener("click", () => {
-        if (i === imageArray.length - 1) {
-          i = -1;
-        }
-        currentImg.src = imageArray[i + 1].src;
-        i++;
-      });
-      // Append elements
-      galleryDiv.append(currentImg);
-      galleryDiv.append(galleryExitButton);
-      document.body.append(galleryLeftArrow);
-      document.body.append(galleryRightArrow);
-      document.body.append(galleryDiv);
-    });
-  }
-};
+//       galleryRightArrow.addEventListener("click", () => {
+//         if (i === imageArray.length - 1) {
+//           i = -1;
+//         }
+//         currentImg.src = imageArray[i + 1].src;
+//         i++;
+//       });
+//       // Append elements
+//       galleryDiv.append(currentImg);
+//       galleryDiv.append(galleryExitButton);
+//       document.body.append(galleryLeftArrow);
+//       document.body.append(galleryRightArrow);
+//       document.body.append(galleryDiv);
+//     });
+//   }
+// };
 
-setupImageGallery(currentGallery);
+// setupImageGallery(currentGallery);

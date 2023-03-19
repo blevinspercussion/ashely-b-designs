@@ -247,6 +247,12 @@ header {
   right: 29vw; */
 }
 
+.large-image {
+  max-height: 100vh;
+  max-width: 100vw;
+  position: fixed;
+}
+
 li {
 }
 
@@ -348,6 +354,16 @@ nav {
   box-shadow: 15px 15px var(--accent-color1);
   padding: 3rem;
   margin-bottom: 5rem;
+}
+
+.shadow-box {
+  position: relative;
+  right: 100vw;
+  bottom: 100vh;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 500;
 }
 
 .shown {
