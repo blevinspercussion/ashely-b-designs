@@ -539,6 +539,10 @@ ul {
     text-align: center;
   }
 
+  .section .hidden {
+    display: none;
+  }
+
   .section-photo {
     margin-left: 8rem;
   }
