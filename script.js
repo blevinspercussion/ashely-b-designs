@@ -48,6 +48,7 @@ const craftsPortfolio = document.getElementById("portfolio-crafts");
 const photographyLink = document.getElementById("photography-link");
 const designLink = document.getElementById("design-link");
 const craftsLink = document.getElementById("crafts-link");
+const bioLink = document.getElementById("bio-link");
 
 let bandImages = document.querySelectorAll(".band-image");
 let familyImages = document.querySelectorAll(".family-image");
@@ -99,13 +100,30 @@ hamburgerIcon.addEventListener("click", () => {
   });
 });
 
-exitIcon.addEventListener("click", () => {
+const closeMobileMenu = () => {
   anime({
     targets: document.getElementById("main-nav"),
     translateX: ["100vw", "-100vw"],
     duration: 1000,
     easing: "easeOutQuad",
   });
+};
+
+photographyLink.addEventListener("click", () => {
+  closeMobileMenu();
+});
+designLink.addEventListener("click", () => {
+  closeMobileMenu();
+});
+craftsLink.addEventListener("click", () => {
+  closeMobileMenu();
+});
+bioLink.addEventListener("click", () => {
+  closeMobileMenu();
+});
+
+exitIcon.addEventListener("click", () => {
+  closeMobileMenu();
 });
 
 // Animate hero on page load
