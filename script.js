@@ -179,15 +179,21 @@ animateSectionOut = (heroDiv, introSection, portfolioSection) => {
   });
   setTimeout(() => {
     heroDiv.classList.add("hidden");
+    heroDiv.hidden = true;
     introSection.classList.add("hidden");
+    introSection.hidden = true;
     portfolioSection.classList.add("hidden");
+    portfolioSection.hidden = true;
   }, 1500);
 };
 
 animateSectionIn = (heroDiv, introSection, portfolioSection) => {
   introSection.classList.remove("hidden");
+  introSection.hidden = false;
   portfolioSection.classList.remove("hidden");
+  portfolioSection.hidden = false;
   heroDiv.classList.remove("hidden");
+  heroDiv.hidden = false;
   anime({
     targets: heroDiv,
     translateX: [-1000, 0],
@@ -252,6 +258,7 @@ hideImages = (imagesArray) => {
   let i = 0;
   while (i < imagesArray.length) {
     imagesArray[i].classList.add("hidden");
+    imagesArray[i].hidden = true;
     i++;
   }
 };
@@ -260,6 +267,7 @@ showImages = (imagesArray) => {
   let i = 0;
   while (i < imagesArray.length) {
     imagesArray[i].classList.remove("hidden");
+    imagesArray[i].hidden = false;
     3;
     i++;
   }
