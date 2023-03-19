@@ -462,8 +462,15 @@ ul {
   }
 
   .hero-photography {
-    background-position-x: -200px;
+    background-position-x: -250px;
     align-items: center;
+    width: 100%;
+  }
+
+  #hero-photography-content {
+    position: absolute;
+    left: -25vw;
+    width: 200%;
   }
 
   .hero-photography h2 {
@@ -475,10 +482,13 @@ ul {
   #hero-photography-text {
     text-align: center;
     font-size: 2rem;
+    /* width: 100vw; */
   }
 
   .hero-buttons-div {
-    left: 0vw;
+    position: absolute;
+    left: -20vw;
+    width: 200vw;
   }
 
   .hero-button {
