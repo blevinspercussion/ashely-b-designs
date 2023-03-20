@@ -542,6 +542,10 @@ ul {
     margin-left: 2rem;
   }
 
+  #portfolio-nav ul {
+    display: none;
+  }
+
   .section-content {
     flex-direction: column;
     width: 100vw;
