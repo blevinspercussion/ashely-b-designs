@@ -49,6 +49,10 @@ const craftsPortfolio = document.getElementById("portfolio-crafts");
 // const designLink = document.querySelectorAll(".design-link");
 // const craftsLink = document.querySelectorAll(".crafts-link");
 // const bioLink = document.querySeleectorAll(".bio-link");
+const photographyLink = document.getElementById("photography-link");
+const designLink = document.getElementById("design-link");
+const craftsLink = document.getElementById("crafts-link");
+const bioLink = document.getElementById("bio-link");
 
 const photographyLinkMobile = document.getElementById(
   "photography-link-mobile"
