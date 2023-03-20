@@ -9,7 +9,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.5 }
+  { threshold: 0.2 }
 );
 
 let hiddenSections = document.querySelectorAll(".section-content");
@@ -45,10 +45,17 @@ const heroCrafts = document.getElementById("hero-crafts");
 const craftsSection = document.getElementById("crafts-section");
 const craftsPortfolio = document.getElementById("portfolio-crafts");
 
-const photographyLink = document.getElementById("photography-link");
-const designLink = document.getElementById("design-link");
-const craftsLink = document.getElementById("crafts-link");
-const bioLink = document.getElementById("bio-link");
+// const photographyLink = document.querySelectorAll(".photography-link");
+// const designLink = document.querySelectorAll(".design-link");
+// const craftsLink = document.querySelectorAll(".crafts-link");
+// const bioLink = document.querySeleectorAll(".bio-link");
+
+const photographyLinkMobile = document.getElementById(
+  "photography-link-mobile"
+);
+const designLinkMobile = document.getElementById("design-link-mobile");
+const craftsLinkMobile = document.getElementById("crafts-link-mobile");
+const bioLinkMobile = document.getElementById("bio-link-mobile");
 
 let bandImages = document.querySelectorAll(".band-image");
 let familyImages = document.querySelectorAll(".family-image");
@@ -93,7 +100,7 @@ const exitIcon = document.getElementById("mobile-exit-icon");
 
 hamburgerIcon.addEventListener("click", () => {
   anime({
-    targets: document.getElementById("main-nav"),
+    targets: document.getElementById("mobile-nav"),
     translateX: [0, "100vw"],
     duration: 1000,
     easing: "easeOutQuad",
@@ -102,23 +109,58 @@ hamburgerIcon.addEventListener("click", () => {
 
 const closeMobileMenu = () => {
   anime({
-    targets: document.getElementById("main-nav"),
+    targets: document.getElementById("mobile-nav"),
     translateX: ["100vw", "-100vw"],
     duration: 1000,
     easing: "easeOutQuad",
   });
 };
 
-photographyLink.addEventListener("click", () => {
+photographyLinkMobile.addEventListener("click", () => {
   closeMobileMenu();
+  currentGallery = bandImages;
+  if (heroPhotography.classList.contains("hidden")) {
+    animateSectionOut(heroDesign, designSection, designPortfolio);
+    animateSectionOut(heroCrafts, craftsSection, craftsPortfolio);
+    setTimeout(() => {
+      animateSectionIn(
+        heroPhotography,
+        photographySection,
+        photographyPortfolio
+      );
+    }, 1500);
+  }
 });
-designLink.addEventListener("click", () => {
+designLinkMobile.addEventListener("click", () => {
   closeMobileMenu();
+  currentGallery = posterImages;
+  if (heroDesign.classList.contains("hidden")) {
+    animateSectionOut(
+      heroPhotography,
+      photographySection,
+      photographyPortfolio
+    );
+    animateSectionOut(heroCrafts, craftsSection, craftsPortfolio);
+    setTimeout(() => {
+      animateSectionIn(heroDesign, designSection, designPortfolio);
+    }, 1500);
+  }
 });
-craftsLink.addEventListener("click", () => {
+craftsLinkMobile.addEventListener("click", () => {
   closeMobileMenu();
+  if (heroCrafts.classList.contains("hidden")) {
+    animateSectionOut(heroDesign, designSection, designPortfolio);
+    animateSectionOut(
+      heroPhotography,
+      photographySection,
+      photographyPortfolio
+    );
+    setTimeout(() => {
+      animateSectionIn(heroCrafts, craftsSection, craftsPortfolio);
+    }, 1500);
+  }
 });
-bioLink.addEventListener("click", () => {
+bioLinkMobile.addEventListener("click", () => {
   closeMobileMenu();
 });
 
