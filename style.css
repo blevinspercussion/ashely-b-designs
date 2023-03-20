@@ -225,7 +225,7 @@ footer {
 .hero-button {
   height: 5rem;
   width: 15rem;
-  margin-left: 3rem;
+  margin-left: 5rem;
   font-size: 2rem;
   border-radius: 25px;
   background-color: var(--bg-main-color);
@@ -522,6 +522,7 @@ ul {
     position: relative;
     right: -35vw;
     top: 10vh;
+    z-index: 100000;
   }
 
   #hero-design {
