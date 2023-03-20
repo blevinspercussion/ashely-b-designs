@@ -34,7 +34,8 @@ const photographyPortfolio = document.getElementById("portfolio-photography");
 const heroPhotography = document.getElementById("hero-photography");
 const heroPhotographyText = document.getElementById("hero-photography-text");
 const heroPhotographyButtons = document.getElementById(
-  "hero-photography-buttons"
+  // "hero-photography-buttons"
+  "photography-hero-button"
 );
 
 const heroDesign = document.getElementById("hero-design");
@@ -192,16 +193,17 @@ animatePhotographyHero = () => {
     opacity: [0, 1],
     filter: ["blur(5px", "blur(0px)"],
     easing: "easeOutQuad",
+    translateX: [50, 0],
   });
 
   anime({
     targets: heroPhotographyButtons,
     delay: 2000,
-    duration: 2000,
+    duration: 1000,
     opacity: [0, 1],
     filter: ["blur(5px", "blur(0px)"],
     easing: "easeOutQuad",
-    translateX: [50, 0],
+    // translateX: [50, 0],
   });
 };
 
